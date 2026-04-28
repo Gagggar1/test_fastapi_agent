@@ -1,0 +1,26 @@
+# Игнорируем файлы окружения (секреты)
+.env
+.env.*
+
+# Виртуальное окружение Python
+venv/
+env/
+.venv/
+__pycache__/
+
+# Кэш Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+.pytest_cache/
+
+# Файлы IDE (VSCode, PyCharm, Cursor)
+.vscode/
+.idea/
+.cursor/
+
+# Тестовые скрипты и временные файлы
+test_request.py
+test_*.py
+*.log
