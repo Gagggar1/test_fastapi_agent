@@ -50,7 +50,7 @@ client = httpx.AsyncClient(timeout=httpx.Timeout(900.0), trust_env=False)
 class ChatRequest(BaseModel):
     text: str = Field(..., min_length=1, description="Текст запроса к агенту")
     session_id: Optional[str] = Field(None, description="ID сессии для контекста")
-    user_id: str = Field(..., description="ID пользователя для аналитики (наше улучшение)")
+    user_id: Optional[str] = Field("web-user", description="ID пользователя для аналитики (наше улучшение)")
     mode: Optional[str] = Field("short", description="Режим ответа: short или detailed")
 
 def _extract_text_from_langflow(resp_json: Dict[str, Any]) -> Optional[str]:
