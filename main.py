@@ -19,7 +19,7 @@ LANGFLOW_INPUT_TYPE = os.getenv("LANGFLOW_INPUT_TYPE") or "chat"
 LANGFLOW_OUTPUT_TYPE = os.getenv("LANGFLOW_OUTPUT_TYPE") or "chat"
 
 # CORS config
-LOVEABLE_ORIGIN = os.getenv("LOVEABLE_ORIGIN") or ""
+LOVEABLE_ORIGIN = (os.getenv("LOVEABLE_ORIGIN") or "").strip().rstrip("/")
 
 missing: List[str] = []
 for k, v in [
